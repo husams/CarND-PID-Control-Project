@@ -40,8 +40,9 @@ int main()
   //pid.Init(0.225, 0.0, 3.0);
   //pid.Init(0.225, 0.0, 4.0);
   //pid.Init(0.225, 0.0, 4.0);
-  pid.Init(0.275822, 0.00135795, 9.16176);
-  
+
+ pid.Init(0.275822, 0.00135795, 9.16176);
+
   PID pid_throttle;
   pid_throttle.Init(1.0,0.0,0.0);
 

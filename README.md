@@ -3,6 +3,24 @@ Self-Driving Car Engineer Nanodegree Program
 
 ---
 
+## Introduction
+
+The purpose of the project was to implement and tune PID controller (Proportional, Integral and Derivative) to drive a vehicle autonomously and safely around the track.   
+
+## Rubric Tasks
+
+## Describe the PID components
+
+1. Proportional component (P) used to steer the car  toward the desired trajectory by setting the steering angle in proportion to Cross Track Error (CTE), which steerinh angle will become small as car get close to the  desired trajectory and CTE close to zero. Hoever at Proportional component had np effect when the CTE was very small and caused the car to overshoot and eventually start oscillating,  see below video.
+
+[![P CONTROLLER](https://img.youtube.com/vi/0ZMFmVLmZeU/0.jpg)](https://youtu.be/0ZMFmVLmZeU "P Controller")
+
+2. Integral  component (I)  add to the steering angle value proportional to the integral of all CTE was observed overtime to componsate for past errors, howver in my case I didn't see noticable different when I was tunning.
+
+3. Derivative component (D) help the car to approche the desired trajectory gracefully by adding value to the streering angle proportional to the CTE change of rate, I saw big improvment when the parameter was tunned see below video.  
+
+[![PD CONTROLLER](https://img.youtube.com/vi/Z_-7tIzJqXQ/0.jpg)](https://youtu.be/Z_-7tIzJqXQ "P.D Controller")
+
 ## Dependencies
 
 * cmake >= 3.5
