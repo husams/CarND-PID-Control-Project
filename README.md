@@ -21,6 +21,17 @@ The purpose of the project was to implement and tune PID controller (Proportiona
 
 [![PD CONTROLLER](https://img.youtube.com/vi/Z_-7tIzJqXQ/0.jpg)](https://youtu.be/Z_-7tIzJqXQ "P.D Controller")
 
+## Tuning of parameters
+
+I started first by manually tunning the Proportional component controller until start oscillating after longer drive, then I start tunning the Derivative component until the car was relatively stable abd can drive for most of the track.
+Then I decided to implement quick version of Twiddle Algorithm, but instead of starting with zero parameter I started with manually tunned parametsr and below was the result.
+
+* P : 0.275822
+* I : 0.00135795
+* D : 9.16176
+
+[![PID CONTROLLER](https://img.youtube.com/vi/TewtCZ9EyX4/0.jpg)](https://youtu.be/TewtCZ9EyX4 "P.I.D Controller")
+
 ## Dependencies
 
 * cmake >= 3.5
