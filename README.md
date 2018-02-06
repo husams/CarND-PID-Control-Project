@@ -9,7 +9,7 @@ The purpose of the project was to implement and tune PID controller (Proportiona
 
 ## Rubric Tasks
 
-## Describe the PID components
+## Describe the effect each of the P, I, D
 
 1. Proportional component (P) used to steer the car  toward the desired trajectory by setting the steering angle in proportion to Cross Track Error (CTE), which steerinh angle will become small as car get close to the  desired trajectory and CTE close to zero. Hoever at Proportional component had np effect when the CTE was very small and caused the car to overshoot and eventually start oscillating,  see below video.
 
@@ -21,7 +21,7 @@ The purpose of the project was to implement and tune PID controller (Proportiona
 
 [![PD CONTROLLER](https://img.youtube.com/vi/Z_-7tIzJqXQ/0.jpg)](https://youtu.be/Z_-7tIzJqXQ "P.D Controller")
 
-## Tuning parameters
+## How the final hyperparameters were chosen
 
 I started first by manually tunning the Proportional component controller until start oscillating after longer drive, then I start tunning the Derivative component until the car was relatively stable abd can drive for most of the track.
 Then I decided to implement quick version of Twiddle Algorithm, but instead of starting with zero parameter I started with manually tunned parametsr and below was the result.
